@@ -67,6 +67,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-added dependencies 
-prop-types = npm i prop-types
-axios = npm i axios
+### Added Dependencies
+###  prop-types `npm i prop-types`
+###  axios `npm i axios`
