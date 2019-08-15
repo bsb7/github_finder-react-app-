@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 // import './App.css';
 import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
 import Search from './components/users/Search';
+import About from './components/pages/About';
 import axios from 'axios';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class  App extends Component {
 
@@ -47,13 +49,23 @@ class  App extends Component {
     const {users, loading} = this.state; 
 
   return (
-    <div className="App">
-      <Navbar title='Github Finder' icon='fab fa-github' />
-      <div className='container'>
-        <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={users.length > 0 ? true : false}/>
-        <Users loading={loading} users={users} />
+    <Router>
+      <div className="App">
+        <Navbar title='Github Finder' icon='fab fa-github' />
+        <div className='container'>
+          <Switch>
+            <Route path='/' exact render={props=>(
+              <Fragment>
+                <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={users.length > 0 ? true : false}/>
+                <Users loading={loading} users={users} />
+              </Fragment>
+              )}
+            />
+            <Route exact path='/about' component={About} />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
   }
 }
