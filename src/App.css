@@ -2,3 +2,35 @@
   width: 100%;
   padding:auto;
 }
+
+li{
+  text-decoration: none;
+}
+
+.link{
+  color:white;
+  margin:0 2rem;
+  text-decoration:none; 
+}
+
+.round-img{
+  border-radius:50%;
+}
+
+.all-center{
+  padding:0 auto;
+}
+.col{
+  margin:2rem;
+  text-align: center;
+}
+.list{
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  margin: 1rem;
+}
+
+.badge{
+  margin:0.5rem;
+}
